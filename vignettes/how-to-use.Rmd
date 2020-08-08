@@ -20,7 +20,6 @@ Load colrectr
 
 ```{r}
 library(colrectr)
-devtools::load_all()
 ```
 
 Read Excel file specifying path and sheet.
