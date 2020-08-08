@@ -1,1 +1,31 @@
-# How to use colrectr
+---
+title: "How To Use"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How To Use}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Workflow
+
+Load colrectr
+
+```{r}
+library(colrectr)
+devtools::load_all()
+```
+
+Read Excel file specifying path and sheet.
+```{r}
+colrect(path = "../inst/extdata/clustered.xlsx",
+        sheet = "降水量",
+        col = 3)
+```

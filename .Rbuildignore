@@ -2,3 +2,6 @@
 ^docs$
 ^pkgdown$
 ^\.github$
+^LICENSE.md$
+^README.Rmd$
+^colrectr.Rproj$
