@@ -26,5 +26,6 @@ Read Excel file specifying path and sheet.
 ```{r}
 colrect(path = "../inst/extdata/clustered.xlsx",
         sheet = "降水量",
-        col = 3)
+        col = 3,
+        regex = "2月")
 ```
