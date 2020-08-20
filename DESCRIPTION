@@ -20,5 +20,6 @@ RoxygenNote: 7.1.1
 Imports: 
     rlang,
     magrittr,
-    readxl
+    readxl,
+    stringr
 VignetteBuilder: knitr
