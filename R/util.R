@@ -11,7 +11,7 @@ show_next_step <- function(df, col, regex) {
     obj       <- as.data.frame(df)[, col]
   } else {
     msg       <- "Match result:"
-    next_step <- "enter ofset"
+    next_step <- "enter offset"
     obj       <- stringr::str_extract(as.data.frame(df)[, col], regex)
   }
   print(msg)
