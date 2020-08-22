@@ -21,5 +21,8 @@ Imports:
     rlang,
     magrittr,
     readxl,
-    stringr
+    stringr,
+    dplyr,
+    zipangu,
+    purrr
 VignetteBuilder: knitr

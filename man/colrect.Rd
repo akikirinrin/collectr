@@ -4,7 +4,15 @@
 \alias{colrect}
 \title{Collect clustered data on multiple sheets into rectangle dataframe}
 \usage{
-colrect(path, sheet, col)
+colrect(
+  path,
+  sheet,
+  row = NULL,
+  col = NULL,
+  regex = NULL,
+  offset = NULL,
+  ends = NULL
+)
 }
 \arguments{
 \item{path}{Path to the xls/xlsx file.}
@@ -14,7 +22,19 @@ integer (the position of the sheet). Ignored if the sheet is specified via
 \code{range}. If neither argument specifies the sheet, defaults to the first
 sheet.}
 
-\item{col}{column position to search keyword}
+\item{row}{Row position of df where the keyword appears}
+
+\item{col}{Column position of df where the keyword appears}
+
+\item{regex}{Regular expression to match keywords}
+
+\item{offset}{The offset (\code{c(row, pos})) of the cluster topleft from
+the coordination of keyword}
+
+\item{ends}{List of regex to locate row- and column- ends of each cluster
+Form should be like \code{ends = list(row = "2019", col = "[Dd]ecember$")}.
+Regex \code{row = } must specify the end of 'left most' columnn of df,
+not that of the column with key matched by \code{regex}}
 }
 \description{
 Collect clustered data on multiple sheets into rectangle dataframe

@@ -3,4 +3,5 @@
 export("%>%")
 export(colrect)
 export(load_kami_excel)
+export(make_ascii)
 importFrom(magrittr,"%>%")

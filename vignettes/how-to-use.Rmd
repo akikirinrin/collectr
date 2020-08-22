@@ -24,8 +24,15 @@ library(colrectr)
 
 Read Excel file specifying path and sheet.
 ```{r}
-colrect(path = "../inst/extdata/clustered.xlsx",
+colrect(path = "../inst/extdata/demo.xlsx",
+        sheet = "降水量")
+```
+
+```{r}
+colrect(path = "../inst/extdata/demo.xlsx",
         sheet = "降水量",
-        col = 3,
-        regex = "2月")
+        col = 1,
+        regex = "^年.月$",
+        offset = c(0, 0),
+        ends = list(row = "^2019$", col = "^12月$"))
 ```

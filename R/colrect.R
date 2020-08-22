@@ -1,9 +1,39 @@
 #' Collect clustered data on multiple sheets into rectangle dataframe
 #'
 #' @inheritParams load_kami_excel
-#' @param col column position to search keyword
+#' @inheritParams unclusterize
+#' @inheritParams locate_keys
 #' @export
-colrect <- function(path, sheet, col = NULL, regex = NULL) {
+colrect <- function(path, sheet, row = NULL, col = NULL,
+                    regex = NULL, offset = c(0, 0), ends = NULL, info = NULL) {
+  if (is.null(col)) {
+    direction <- "h"
+    pos       <- row
+  } else {
+    direction <- "v"
+    pos       <- col
+  }
+
+  instruct_next_step(row = row, col = col,
+                     regex = regex, offset = offset)
   load_kami_excel(path = path, sheet = sheet) %>%
-    show_next_step(col = col, regex = regex)
+    unclusterize(regex     = regex,
+                 direction = direction,
+                 pos       = pos,
+                 offset    = offset,
+                 ends      = ends,
+                 info      = info)
+}
+
+instruct_next_step <- function(row, col, regex, offset) {
+  if (is.null(col) & is.null(row)) {
+    msg       <- "Give me 'row' or 'col' to search keyword:"
+  } else if (is.null(regex)) {
+    msg       <- "Give me 'regex' to match keyword from this string:"
+  } else if (is.null(offset)) {
+    msg       <- "Match result:"
+  } else {
+    msg       <- ""
+  }
+  message(msg)
 }
