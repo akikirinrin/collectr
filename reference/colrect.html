@@ -124,7 +124,15 @@
     <p>Collect clustered data on multiple sheets into rectangle dataframe</p>
     </div>
 
-    <pre class="usage"><span class='fu'>colrect</span>(<span class='kw'>path</span>, <span class='kw'>sheet</span>, <span class='kw'>col</span>)</pre>
+    <pre class="usage"><span class='fu'>colrect</span>(
+  <span class='kw'>path</span>,
+  <span class='kw'>sheet</span>,
+  row = <span class='kw'>NULL</span>,
+  col = <span class='kw'>NULL</span>,
+  regex = <span class='kw'>NULL</span>,
+  offset = <span class='kw'>NULL</span>,
+  ends = <span class='kw'>NULL</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -141,8 +149,28 @@ integer (the position of the sheet). Ignored if the sheet is specified via
 sheet.</p></td>
     </tr>
     <tr>
+      <th>row</th>
+      <td><p>Row position of df where the keyword appears</p></td>
+    </tr>
+    <tr>
       <th>col</th>
-      <td><p>column position to search keyword</p></td>
+      <td><p>Column position of df where the keyword appears</p></td>
+    </tr>
+    <tr>
+      <th>regex</th>
+      <td><p>Regular expression to match keywords</p></td>
+    </tr>
+    <tr>
+      <th>offset</th>
+      <td><p>The offset (<code>c(row, pos</code>)) of the cluster topleft from
+the coordination of keyword</p></td>
+    </tr>
+    <tr>
+      <th>ends</th>
+      <td><p>List of regex to locate row- and column- ends of each cluster
+Form should be like <code>ends = list(row = "2019", col = "[Dd]ecember$")</code>.
+Regex <code>row = </code> must specify the end of 'left most' columnn of df,
+not that of the column with key matched by <code>regex</code></p></td>
     </tr>
     </table>
 

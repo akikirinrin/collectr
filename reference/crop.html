@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • colrectr</title>
+<title>Crop data frame at specific keyword — crop • colrectr</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Crop data frame at specific keyword — crop" />
+<meta property="og:description" content="Crop data frame at specific keyword" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -112,108 +113,51 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Crop data frame at specific keyword</h1>
+    
+    <div class="hidden name"><code>crop.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Crop data frame at specific keyword</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>crop</span>(<span class='kw'>df</span>, direction = <span class='kw'>NULL</span>, pos = <span class='kw'>NULL</span>, regex = <span class='kw'>NULL</span>, use_after = <span class='fl'>FALSE</span>)</pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="append_info.html">append_info()</a></code> </p>
-        </td>
-        <td><p>Append information stored in list to data frame</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="colrect.html">colrect()</a></code> </p>
-        </td>
-        <td><p>Collect clustered data on multiple sheets into rectangle dataframe</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="crop.html">crop()</a></code> </p>
-        </td>
-        <td><p>Crop data frame at specific keyword</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="extract_a_cluster.html">extract_a_cluster()</a></code> </p>
-        </td>
-        <td><p>Extract a cluster from df using the keyword</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="list2df.html">list2df()</a></code> </p>
-        </td>
-        <td><p>Expand single value list to data frame</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="load_kami_excel.html">load_kami_excel()</a></code> </p>
-        </td>
-        <td><p>Load data from all range of Excel sheet as character</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="locate_keys.html">locate_keys()</a></code> </p>
-        </td>
-        <td><p>Locate keywords in row or column of the given data frame</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="locate_matchend.html">locate_matchend()</a></code> </p>
-        </td>
-        <td><p>Locate the end of repeated match</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="make_ascii.html">make_ascii()</a></code> </p>
-        </td>
-        <td><p>Convert full-width numbers in df into ASCII numbers</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="pull_vector.html">pull_vector()</a></code> </p>
-        </td>
-        <td><p>Pull vector out of data frame</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="unclusterize.html">unclusterize()</a></code> </p>
-        </td>
-        <td><p>Extract data clusters from data frame using the keyword</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="vectorize_row.html">vectorize_row()</a></code> </p>
-        </td>
-        <td><p>Vectorize a row</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>df</th>
+      <td><p>Data frame to be processed</p></td>
+    </tr>
+    <tr>
+      <th>direction</th>
+      <td><p>Direction of the vector to be pulled from df
+#'</p><dl>
+<dt>"h"</dt><dd><p>specific row of the df will be returned as avector</p></dd>
+<dt>"v"</dt><dd><p>specific column of the df will be returned as a vector</p></dd>
+
+</dl></td>
+    </tr>
+    <tr>
+      <th>pos</th>
+      <td><p>Row- or column position to be searched</p></td>
+    </tr>
+    <tr>
+      <th>regex</th>
+      <td><p>regex to match keyword</p></td>
+    </tr>
+    <tr>
+      <th>use_after</th>
+      <td><p>If TRUE, use part after match</p></td>
+    </tr>
     </table>
-  </div>
 
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
