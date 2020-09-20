@@ -13,7 +13,7 @@ test_that("colrect() loads data as is", {
                     regex = "^a$",
                     offset = c(0, -2),
                     ends = list(row = "A30", col = "test")),
-            "list")
+            "data.frame")
 })
 
 ## test_that("colrect() loads data as is", {
