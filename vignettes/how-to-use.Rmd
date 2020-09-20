@@ -36,3 +36,16 @@ colrect(path = "../inst/extdata/demo.xlsx",
         offset = c(0, 0),
         ends = list(row = "^2019$", col = "^12月$"))
 ```
+
+# Read multiple sheets using regular expression
+
+```{r}
+colrect(
+    path = "../inst/extdata/demo.xlsx",
+    sheet_regex = ".+",
+    col = 1,
+    regex = "^年.月",
+  offset = c(0, 0),
+  ends = list(row = "^2[0-9]{3}", col = "^12月$")
+)
+```
