@@ -6,21 +6,19 @@
 \usage{
 colrect(
   path,
-  sheet,
+  sheet_regex,
   row = NULL,
   col = NULL,
   regex = NULL,
-  offset = NULL,
-  ends = NULL
+  offset = c(0, 0),
+  ends = NULL,
+  info = NULL
 )
 }
 \arguments{
 \item{path}{Path to the xls/xlsx file.}
 
-\item{sheet}{Sheet to read. Either a string (the name of a sheet), or an
-integer (the position of the sheet). Ignored if the sheet is specified via
-\code{range}. If neither argument specifies the sheet, defaults to the first
-sheet.}
+\item{sheet_regex}{regex to search key}
 
 \item{row}{Row position of df where the keyword appears}
 
@@ -35,6 +33,16 @@ the coordination of keyword}
 Form should be like \code{ends = list(row = "2019", col = "[Dd]ecember$")}.
 Regex \code{row = } must specify the end of 'left most' columnn of df,
 not that of the column with key matched by \code{regex}}
+
+\item{info}{Parameters to make key:value list such as
+\describe{
+\item{key_offset}{Offset \code{c(row, col)} of \code{key} topleft
+from df topleft. If \code{NULL}, automatically set to \code{keyn}}
+\item{key_dim}{Dimension \code{c(row, col)} of \code{key}}
+\item{value_offset}{Offset \code{c(row, col)} of \code{value} topleft from
+df topleft}
+\item{value_dim}{Dimension \code{c(row, col)} of \code{value}}
+}}
 }
 \description{
 Collect clustered data on multiple sheets into rectangle dataframe

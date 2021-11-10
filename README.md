@@ -1,4 +1,4 @@
-# colrectr
+# colrectr <a href=''><img src='man/figures/logo.png' align="right" height="139" /></a>
 
 Collects messy data into rectangular format.
 
