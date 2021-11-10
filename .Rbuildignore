@@ -6,3 +6,5 @@
 ^README.Rmd$
 ^colrectr.Rproj$
 ^tools$
+^.*\.Rproj$
+^\.Rproj\.user$

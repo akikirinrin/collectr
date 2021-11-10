@@ -3,6 +3,7 @@
 #' @inheritParams load_kami_excel
 #' @inheritParams unclusterize
 #' @inheritParams locate_keys
+#' @param sheet_regex regex to search key
 #' @export
 colrect <- function(path, sheet_regex, row = NULL, col = NULL,
                     regex = NULL, offset = c(0, 0), ends = NULL, info = NULL) {
